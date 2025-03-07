@@ -16,3 +16,9 @@ to do real time streaming, you need data source, the connector
   "plugin.name": "pgoutput"
 }
 ```
+
+## wget jdbc plugins
+```
+wget https://packages.confluent.io/maven/io/confluent/kafka-connect-jdbc/10.7.0/kafka-connect-jdbc-10.7.0.jar
+wget https://jdbc.postgresql.org/download/postgresql-42.6.0.jar -P ./plugins/jdbc/
+```

@@ -1,0 +1,19 @@
+{
+    "name": "jdbc-sink-postgres",
+    "config": {
+      "connector.class": "io.confluent.connect.jdbc.JdbcSinkConnector",
+      "connection.url": "jdbc:postgresql://postgres:5432/financial_db",
+      "connection.user": "postgres",
+      "connection.password": "postgres",
+      "topics": "transaction-data",
+      "insert.mode": "upsert",
+      "pk.fields": "transaction_id",
+      "pk.mode": "record_value",
+      "auto.create": "true",
+      "auto.evolve": "true",
+      "delete.enabled": "false",
+      "value.converter": "org.apache.kafka.connect.json.JsonConverter",
+      "value.converter.schemas.enable": "false"
+    }
+  }
+  
